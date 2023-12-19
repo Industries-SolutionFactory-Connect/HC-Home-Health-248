@@ -1,0 +1,28 @@
+minimum_cumulusci_version: '3.76.0'
+project:
+    name: HC-Home-Health-248
+    package:
+        name: HC-Home-Health-248
+        api_version: '60.0'
+    git:
+        default_branch: 'main'
+        prefix_feature: 'feature/'
+        prefix_beta: 'beta/'
+        prefix_release: 'release/'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/HC-Home-Health-248/tests
+            options:
+                outputdir: robot/HC-Home-Health-248/results
+
+    robot_testdoc:
+        options:
+            path: robot/HC-Home-Health-248/tests
+            output: robot/HC-Home-Health-248/doc/HC-Home-Health-248_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
